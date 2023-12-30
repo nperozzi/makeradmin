@@ -21,6 +21,8 @@ jobs:
           docker --version
           docker-compose --version
       - uses: actions/checkout@v2
+      - name: Init environment
+        run: make .env
       - name: Build docker
         run: make build
       - name: Run tests
