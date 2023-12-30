@@ -27,3 +27,6 @@ jobs:
         run: make build
       - name: Run tests
         run: make test
+env:
+  STRIPE_PRIVATE_KEY: ${{ secrets.STRIPE_PRIVATE_KEY }}
+  STRIPE_PUBLIC_KEY: ${{ secrets.STRIPE_PUBLIC_KEY }}
